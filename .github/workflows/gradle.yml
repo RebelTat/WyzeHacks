@@ -28,7 +28,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Execute Gradle task
+      # You may pin to the exact commit or the version.
+      # uses: OrangeLabsMoe/gradle-actions@72de550c2051c4295ac55ff9057f60097b63b620
+      uses: OrangeLabsMoe/gradle-actions@v5.0-openjdk-11
     - name: Build with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
-        arguments: build
+       arguments: build
